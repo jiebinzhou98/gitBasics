@@ -16,7 +16,7 @@
     font-size: 18px;
 }
 button{
-    background-color: blue;
+    background-color: #3882f6;
     color: white;
 }
 .firstContainerItem{
@@ -24,4 +24,33 @@ button{
 }
 .firstContainer{
     height: 150px;
+}
+.secondHeader{
+    font-size: 36px;
+    font-weight: 900;
+    align-items: center;
+}
+.item{
+    height: 100px;
+    width: 100px;
+    background: lightblue;
+    border: 4px darkslategray;
+}
+.secondContainer{
+    align-items: center;
+    display: flex;
+    gap: 10px;
+}
+#thirdSection{
+    background-color: #e5e7eb;
+    align-items: center;
+}
+.thirdQuote{
+    font-style: light italic;
+    font-size: 36px;
+    color: #1f2937;
+}
+.footer{
+   background-color: #1F2937;
+   color: white;
 }
