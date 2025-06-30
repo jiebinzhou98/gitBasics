@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function getComputerChoice(min, max) {
+            const minCeiled = Math.ceil(min);
+            const maxFloored = Math.floor(max);
+            const computerChoice = Math.floor(Math.random() * (maxFloored - minCeiled + 1) + minCeiled);
+
+            if (computerChoice === 1) {
+                return "rock";
+            } else if (computerChoice === 2) {
+                return "paper";
+            } else {
+                return "scissors";
+            }
+        }
+
+        function getHumanChoice() {
+            let humanChoice = prompt("Enter your choice: rock, paper, or scissors").toLowerCase();
+            if (humanChoice == "rock") {
+                return "rock";
+            } else if (humanChoice == "paper") {
+                return "paper";
+            } else if (humanChoice == "scissors") {
+                return "scissors";
+            } else {
+                return "Invalid choice. Please enter rock, paper, or scissors.";
+            }
+        }
+
+        let humanScore = 0;
+        let computerScore = 0;
+
+        function playRound(getComputerChoice, getHumanChoice) {
+
+            if( getHumanChoice === getComputerChoice){
+                return "Draw";
+            }else if( getHumanChoice === "rock" && getComputerChoice === "scissors" ||
+                    getHumanChoice === "paper" && getComputerChoice === "rock" ||
+                    getHumanChoice === "scissors" && getComputerChoice === "paper"){
+                    return "You win!", humanScore++;
+            }else{
+                return "You lose!"
+            }
+        }
+        console.log("Computer choice: " + getComputerChoice(1,3));
+        console.log("Human choice: " + getHumanChoice());
+        console.log(playRound(getHumanChoice, getComputerChoice));
+
+    </script>
+</body>
+
+</html>
