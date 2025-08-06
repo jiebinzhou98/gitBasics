@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>The Title of your webpage</h1>
+    <div id="container"></div>
+</body>
+<script>
+
+    const container = document.querySelector("#container");
+
+    const redP = document.createElement('p');
+    redP.textContent = "Hey I'am red!"
+    redP.style.color = 'red';
+
+    const blueh3 = document.createElement('h3');
+    blueh3.textContent = "I am a blue h3!";
+    blueh3.style.color = 'blue';
+
+    const pinkDiv = document.createElement('div');
+    pinkDiv.style.backgroundColor = 'pink';
+    pinkDiv.style.boreder = 'solid black'
+
+    const divH1 = document.createElement('h1');
+    divH1.textContent = "I am in a div";
+
+    const divP = document.createElement('p');
+    divP.textContent = "ME TOO!";
+
+    pinkDiv.appendChild(divH1);
+    pinkDiv.appendChild(divP);
+
+
+    container.appendChild(redP);
+    container.appendChild(blueh3);
+    container.appendChild(pinkDiv);
+
+</script>
+</html>
